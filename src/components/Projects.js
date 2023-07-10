@@ -2,8 +2,7 @@ export const projects = [
   {
     id: 1,
     name: "one",
-    description:
-      "drescr1 nTDwTa7B0LsyjFiY0knzR8oW1rbyeXtiTU2qMfM0M06QLDcAc9h9I5H",
+    description: "drescr1 nTDwTa7B0LsyjFiY0knzR8oW1rbyeXtiTU2qMfM0M5H",
     repo: "https://github.com/yairdorantes/EnglishApp/",
     image: "https://i.ytimg.com/vi/DyvwxoRtfH0/maxresdefault.jpg",
   },
@@ -11,7 +10,7 @@ export const projects = [
     id: 2,
     name: "two",
     description:
-      "Love at First Sting es el noveno álbum de estudio de la banda alemana de hard rock y heavy metal Scorpions,",
+      "Love at First Sting es el  alemana de hard rock y heavy metal Scorpions,",
     image:
       "https://www.comunidadxbox.com/wp-content/uploads/2023/02/a3k-scckwbq.jpg",
   },
