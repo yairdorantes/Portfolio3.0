@@ -62,18 +62,16 @@ const MyProjects = () => {
         style={{
           backgroundImage: `url(${project.image})`,
         }}
-        className={`relative transition-all duration-300 border-2 border-gray-800 bg-center bg-cover rounded-3xl h-[350px] mb-3 ${
-          isDesktop ? "w-[350px] " : "w-5/6 mb-1 mx-auto  "
-        }${numbers.includes(i) ? "topo opacity-100 " : "opacity-0 "}${
-          isSelected
-            ? ""
-            : isDesktop
-            ? "w-[145px] grayscale"
-            : "h-[65px] grayscale"
-        }`}
+        className={`
+        relative transition-all duration-300 
+        ${isDesktop ? "w-[350px]" : "w-5/6 mb-1 mx-auto"}
+        ${isSelected ? "" : (isDesktop ? "w-36" : "h-[65px]") + " grayscale"}
+        border-2 border-gray-800 bg-center bg-cover rounded-3xl h-[350px] mb-3
+        ${numbers.includes(i) ? "topo opacity-100" : "opacity-0"}
+      `}
       >
         {isSelected && (
-          <div className="absolute  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-20 bottom-0">
+          <div className="absolute  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-30 bg-black bottom-0">
             <div className="absolute right-2 top-2">
               <svg
                 viewBox="0 0 1024 1024"
@@ -114,12 +112,13 @@ const MyProjects = () => {
   };
   return (
     <>
-      <div className="fixed top-0 bg-white btn text-black">
+      {/* <div className="fixed top-0 bg-white  text-black">
         is in view?{inView.toString()} {numbers.toString()}
-      </div>
+      </div> */}
       <div ref={ref} className="flex gap-4 justify-center">
         {isDesktop && Projects.map(renderProject)}
       </div>
+
       <div ref={ref} className="mt-20 ">
         {isMobile && Projects.map(renderProject)}
         {inView && (

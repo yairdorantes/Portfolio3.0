@@ -22,13 +22,7 @@ export const projects = [
     image:
       "https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-preview.jpg",
   },
-  {
-    id: 4,
-    name: "one",
-    description: "drescr1",
-    image:
-      "https://www.musicmundial.com/wp-content/uploads/2023/05/Jisoo-de-BLACKPINK-llama-la-atencion-por-la-forma-en-la-que-trata-a-sus-fans.jpg",
-  },
+
   {
     id: 5,
     name: "three",
