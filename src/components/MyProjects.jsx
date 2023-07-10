@@ -10,7 +10,7 @@ const MyProjects = () => {
   const isMobile = useMediaQuery({ maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const [projectSelected, setProjectSelected] = useState(1);
-  const [numbers, setNumbers] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const [numbers, setNumbers] = useState([]);
   const [startArray, setStartArray] = useState(0);
   const [endArray, setEndArray] = useState(5);
   const [cont, setCont] = useState(0);
@@ -33,9 +33,9 @@ const MyProjects = () => {
     }, 400);
     setIntervalId(id);
   };
-  // useEffect(() => {
-  //   inView ? createInterval() : setNumbers([]);
-  // }, [inView]);
+  useEffect(() => {
+    inView ? createInterval() : setNumbers([]);
+  }, [inView]);
 
   const nextProjects = () => {
     if (endArray < projects.length) {
