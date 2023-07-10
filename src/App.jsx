@@ -1,11 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 import SliderProjects from "./components/SliderProjects";
+import Stack from "./components/Stack";
+import MyProjects from "./components/MyProjects";
 
 function App() {
   return (
     <>
-      <SliderProjects></SliderProjects>
+      {/* <Stack></Stack> */}
+      {/* <SliderProjects></SliderProjects> */}
+      <MyProjects></MyProjects>
     </>
   );
 }
