@@ -63,10 +63,10 @@ const MyProjects = () => {
           backgroundImage: `url(${project.image})`,
         }}
         className={`
-        relative transition-all duration-300 
+        relative transition-all duration-300  
         ${isDesktop ? "w-[350px]" : "w-5/6 mb-1 mx-auto"} 
-        ${!isSelected && (isDesktop ? " ancho " : "h-[65px]") + " grayscale"} 
-        border-2 border-gray-800 bg-center bg-cover rounded-3xl h-[350px] mb-3
+        ${!isSelected && (isDesktop ? " ancho " : "h-[65px]") + " grayscale "} 
+        border-2 border-[#5d574d] shadow-lg bg-center bg-cover rounded-3xl h-[350px] mb-3
         ${numbers.includes(i) ? "topo opacity-100" : "opacity-0"}
       `}
       >
