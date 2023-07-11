@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  /* background-color: #fff; */
+}
 @keyframes rotate {
   0% {
     transform: translateX(-65px);
