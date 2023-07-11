@@ -65,7 +65,7 @@ const MyProjects = () => {
         className={`
         relative transition-all duration-300 
         ${isDesktop ? "w-[350px]" : "w-5/6 mb-1 mx-auto"} 
-        ${!isSelected && (isDesktop ? "w-36" : "h-[65px]") + " grayscale"} 
+        ${!isSelected && (isDesktop ? " ancho " : "h-[65px]") + " grayscale"} 
         border-2 border-gray-800 bg-center bg-cover rounded-3xl h-[350px] mb-3
         ${numbers.includes(i) ? "topo opacity-100" : "opacity-0"}
       `}
