@@ -3,7 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
+  scroll-behavior: smooth;
   /* background-color: #fff; */
 }
 @keyframes rotate {

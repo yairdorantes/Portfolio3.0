@@ -20,7 +20,7 @@ const Stack = () => {
       if (cont > 10) {
         clearInterval(id);
       }
-    }, 500);
+    }, 700);
     setIntervalId(id);
   };
 
@@ -32,6 +32,7 @@ const Stack = () => {
   return (
     <>
       <div
+        id="section2"
         ref={ref}
         className="flex mt-10 select-none cursor-pointer gap-4 mx-auto justify-center flex-wrap max-w-lg"
       >

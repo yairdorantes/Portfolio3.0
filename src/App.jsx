@@ -1,14 +1,13 @@
-import { useState } from "react";
-import "./App.css";
 import Stack from "./components/Stack";
 import MyProjects from "./components/MyProjects";
+import Me from "./components/Me";
 
 function App() {
   return (
     <>
-      <Stack></Stack>
-      {/* <SliderProjects></SliderProjects> */}
-      {/* <MyProjects></MyProjects> */}
+      <Me />
+      <Stack />
+      <MyProjects />
     </>
   );
 }

@@ -57,6 +57,7 @@ const MyProjects = () => {
     const isSelected = projectSelected === i;
     return (
       <div
+        id="section3"
         key={i}
         onClick={() => setProjectSelected(i)}
         style={{
