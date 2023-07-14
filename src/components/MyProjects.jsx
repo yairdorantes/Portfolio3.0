@@ -63,7 +63,7 @@ const MyProjects = () => {
         style={{
           backgroundImage: `url(${project.image})`,
         }}
-        className={`
+        className={`mt-24
         relative transition-all duration-300  
         ${isDesktop ? "w-[350px]" : "w-5/6 mb-1 mx-auto"} 
         ${!isSelected && (isDesktop ? " ancho " : "h-[65px]") + " grayscale "} 

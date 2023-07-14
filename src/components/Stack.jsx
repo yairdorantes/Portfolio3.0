@@ -62,7 +62,6 @@ const Stack = () => {
           </div>
         ))}
       </div>
-      <div className="h-screen"></div>
     </>
   );
 };
