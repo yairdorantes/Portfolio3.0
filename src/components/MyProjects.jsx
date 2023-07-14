@@ -116,48 +116,48 @@ const MyProjects = () => {
   };
   return (
     <>
-      <div
-        ref={ref}
-        id="section3"
-        className="text-3xl font-extrabold text-white mt-24 mb-10"
-      >
-        Mis proyectos
-      </div>
-      {/* <div className="fixed top-0 bg-white  text-black">
-        is in view?{inView.toString()} {numbers.toString()}
-      </div> */}
-      <div className="flex gap-4 justify-center">
-        {isDesktop && Projects.map(renderProject)}
-      </div>
-
-      <div className="mt-20 ">
-        {isMobile && Projects.map(renderProject)}
-        {inView && (
-          <div className="flex gap-3 mt-10 justify-center">
-            <button className="shadow__btn" onClick={prevProjects}>
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                height="1em"
-                width="1em"
-                className="w-10 h-10"
-              >
-                <path d="M13.293 6.293L7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
-              </svg>
-            </button>
-            <button className="shadow__btn" onClick={nextProjects}>
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                height="1em"
-                width="1em"
-                // className="w-10 h-6 "
-              >
-                <path d="M10.707 17.707L16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
-              </svg>
-            </button>
-          </div>
-        )}
+      <div ref={ref}>
+        <div
+          id="section3"
+          className="text-3xl font-extrabold text-white mt-24 mb-10"
+        >
+          Mis proyectos
+        </div>
+        {/* <div className="fixed top-0 bg-white  text-black">
+          is in view?{inView.toString()} {numbers.toString()}
+        </div> */}
+        <div className="flex gap-4 justify-center">
+          {isDesktop && Projects.map(renderProject)}
+        </div>
+        <div className="mt-20 ">
+          {isMobile && Projects.map(renderProject)}
+          {inView && (
+            <div className="flex gap-3 mt-10 justify-center">
+              <button className="shadow__btn" onClick={prevProjects}>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  height="1em"
+                  width="1em"
+                  className="w-10 h-10"
+                >
+                  <path d="M13.293 6.293L7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                </svg>
+              </button>
+              <button className="shadow__btn" onClick={nextProjects}>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  height="1em"
+                  width="1em"
+                  // className="w-10 h-6 "
+                >
+                  <path d="M10.707 17.707L16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                </svg>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
