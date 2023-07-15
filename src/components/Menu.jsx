@@ -52,7 +52,7 @@ const Menu = () => {
             ? isVisible
               ? "flex-col text-3xl capitalize cursor-pointer top-0  right-0 justify-around items-center bg-white bg-opacity-40  z-10 w-full h-full"
               : "flex-col top-0 capitalize justify-around items-center bg-white bg-opacity-40  z-10 w-full h-full -right-full"
-            : "right-10 top-5  gap-10"
+            : "right-10 top-5  gap-10 capitalize"
         }  `}
       >
         <a
