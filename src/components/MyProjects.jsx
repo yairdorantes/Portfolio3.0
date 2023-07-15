@@ -116,12 +116,29 @@ const MyProjects = () => {
   };
   return (
     <>
-      <div ref={ref}>
+      <div ref={ref} className="mt-36">
         <div
           id="section3"
-          className="text-3xl font-extrabold text-white mt-24 mb-10"
+          className={`relative text-white  mb-10 h-44 px-5  lg:px-20 max-w-3xl`}
         >
-          Mis proyectos
+          <div
+            className={`text-3xl absolute transition-all duration-500 ${
+              inView ? "top-8 opacity-100" : "-top-[30px] opacity-0"
+            } -top-20 font-extrabold`}
+          >
+            Mis proyectos
+          </div>
+          <div
+            className={`${
+              inView ? "opacity-100" : "opacity-0"
+            } transition-all  duration-700  mt-8 pt-20 text-lg `}
+          >
+            Estos proyectos demuestran mi experiencia con ejemplos prácticos de
+            algunos de mis trabajos, incluidas breves descripciones y enlaces a
+            repositorios de código y demostraciones en vivo. Muestran mi
+            capacidad para enfrentar desafíos complejos, adaptarme a diversas
+            tecnologías y supervisar proyectos de manera eficiente.
+          </div>
         </div>
         {/* <div className="fixed top-0 bg-white  text-black">
           is in view?{inView.toString()} {numbers.toString()}
