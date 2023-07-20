@@ -76,7 +76,7 @@ const MyProjects = () => {
       `}
         >
           {isSelected && (
-            <div className="absolute  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-30 bg-black bottom-0">
+            <div className="absolute font-FiraCode  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-30 bg-black bottom-0">
               <div className="absolute right-2 top-2 cursor-pointer">
                 <a href={project.repo}>
                   <svg
@@ -90,14 +90,16 @@ const MyProjects = () => {
                   </svg>
                 </a>
               </div>
-              <span className="text-2xl  text-white font-bold">
+              <span className="text-2xl   text-white font-bold">
                 {project.name}
               </span>
-              <p className="text-white font-FiraCode max-h-10 mb-2 break-words text-md">
+              <p className="text-white  max-h-10 mb-2 break-words text-md">
                 {project.description}
               </p>
 
-              <button className="btn btn-sm absolute bottom-2">Demo</button>
+              {project.link_demo && project.link_demo.length > 0 && (
+                <button className="btn btn-sm absolute bottom-2">Demo</button>
+              )}
             </div>
           )}
           {!isSelected && !isMobile && (
@@ -120,7 +122,7 @@ const MyProjects = () => {
   };
   return (
     <>
-      <div className="mt-36" ref={ref}>
+      <div id="portfolio" className="mt-36 font-RaleWay" ref={ref}>
         <div
           className={`text-gray-200  ${
             isDesktop ? "w-3/5  mx-auto" : "w-5/6  mx-auto"
@@ -134,7 +136,7 @@ const MyProjects = () => {
             Mis proyectos
           </h3>
           <p
-            className={`transition-all duration-700 ${
+            className={` transition-all duration-700 ${
               inView ? "opacity-100" : "opacity-0"
             }`}
           >

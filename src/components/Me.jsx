@@ -5,7 +5,7 @@ const Me = () => {
     <>
       <div
         id="home"
-        className="min-h-screen  bg-cover bg-center bg-fixed "
+        className="min-h-screen top font-RaleWay mb-16 bg-cover bg-center bg-fixed "
         style={{
           backgroundImage: `linear-gradient(rgba(4, 4, 4, 0.458), rgba(12, 12, 12, 0.77)), url(${bg})`,
         }}

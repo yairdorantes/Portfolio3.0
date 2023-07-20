@@ -57,7 +57,7 @@ const Menu = () => {
         </div>
       )}
       <div
-        className={`fixed transition-all duration-300  text-white font-bold text-xl flex  ${
+        className={`fixed  transition-all duration-300  text-white font-bold text-xl flex  ${
           isMobile
             ? isVisible
               ? "flex-col text-3xl capitalize cursor-pointer top-0  right-0 justify-around items-center bg-white bg-opacity-40  z-10 w-full h-full"
@@ -68,20 +68,20 @@ const Menu = () => {
         <a
           href="#home"
           onClick={() => isMobile && setIsVisible(false)}
-          className={`${
+          className={` ${
             isMobile
-              ? "h-1/4 bg-blue-600 bg-opacity-70 w-full flex justify-center items-center"
+              ? "h-1/4 bg-blue-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
-          }`}
+          }   `}
         >
           home
         </a>
         <a
-          href="#section2"
+          href="#skills"
           onClick={() => isMobile && setIsVisible(false)}
           className={`${
             isMobile
-              ? "h-1/4 bg-teal-600 bg-opacity-70 w-full flex justify-center items-center"
+              ? "h-1/4 bg-teal-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
           }`}
         >
@@ -89,11 +89,11 @@ const Menu = () => {
         </a>
 
         <a
-          href="#section3"
+          href="#portfolio"
           onClick={() => isMobile && setIsVisible(false)}
           className={`${
             isMobile
-              ? "h-1/4 bg-rose-600 bg-opacity-70 w-full flex justify-center items-center"
+              ? "h-1/4 bg-rose-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
           }`}
         >
@@ -106,7 +106,7 @@ const Menu = () => {
           onClick={() => isMobile && setIsVisible(false)}
           className={`${
             isMobile
-              ? "h-1/4 bg-yellow-600 bg-opacity-70 w-full flex justify-center items-center"
+              ? "h-1/4 bg-yellow-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
           }`}
         >

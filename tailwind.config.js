@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       FiraCode: ["Fira Code", "monospace"],
+      RaleWay: ["Raleway", "sans-serif"],
     },
     extend: {
       keyframes: {

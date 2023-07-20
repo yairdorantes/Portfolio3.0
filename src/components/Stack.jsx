@@ -28,7 +28,6 @@ const Stack = () => {
   };
 
   useEffect(() => {
-    console.log(inView);
     inView && createInterval();
   }, [inView]);
 
@@ -36,8 +35,8 @@ const Stack = () => {
     <>
       <div
         ref={ref}
-        id="section2"
-        className={`text-3xl   text-white font-extrabold mt-24 mb-10 ${
+        id="skills"
+        className={`bottom text-3xl font-RaleWay   text-white font-extrabold pt-24 mb-10 ${
           inView ? "expand-top" : "opacity-0"
         } text-center  `}
       >

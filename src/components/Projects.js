@@ -5,6 +5,7 @@ export const projects = [
     description: "drescr1 nTDwTa7B0LsyjFiY0knzR8oW1rbyeXtiTU2qMfM0M5H",
     repo: "https://github.com/yairdorantes/EnglishApp/",
     image: "https://i.ytimg.com/vi/DyvwxoRtfH0/maxresdefault.jpg",
+    link_demo: "https://i.ytimg.com/vi/",
   },
   {
     id: 2,
