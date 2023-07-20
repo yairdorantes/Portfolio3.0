@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-
+import cv from "../media/cv.pdf";
 const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 1023 });
   //   const isDesktop = useMediaQuery({ minWidth: 1024 });
+  useEffect(() => {
+    const body = document.querySelector("body");
+    if (!isVisible) {
+      body.classList.remove("overflow-hidden");
+      body.classList.add("overflow-auto");
+    } else {
+      body.classList.remove("overflow-auto");
+      body.classList.add("overflow-hidden");
+    }
+  }, [isVisible]);
 
   return (
     <>
       {isMobile && (
         <div
-          className="fixed top-4 right-4 z-20"
+          className="fixed top-4 right-4 z-20 "
           onClick={() => setIsVisible(!isVisible)}
         >
           {isVisible ? (
@@ -90,7 +100,9 @@ const Menu = () => {
           Portfolio
         </a>
         <a
-          href="#section3"
+          href={cv}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => isMobile && setIsVisible(false)}
           className={`${
             isMobile

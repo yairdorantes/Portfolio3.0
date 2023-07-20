@@ -6,6 +6,10 @@ const MyProjects = () => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
+  const { ref: ref2, inView: inView2 } = useInView({
+    threshold: 0,
+  });
+
   const [Projects, setProjects] = useState(projects.slice(0, 5));
   const isMobile = useMediaQuery({ maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -34,8 +38,8 @@ const MyProjects = () => {
     setIntervalId(id);
   };
   useEffect(() => {
-    inView ? createInterval() : setNumbers([]);
-  }, [inView]);
+    inView2 ? createInterval() : setNumbers([]);
+  }, [inView2]);
 
   const nextProjects = () => {
     if (endArray < projects.length) {
@@ -65,7 +69,7 @@ const MyProjects = () => {
           }}
           className={`
         relative transition-all duration-300  
-        ${isDesktop ? "w-[350px]" : "w-5/6 mb-1 mx-auto"} 
+        ${isDesktop ? "w-[350px]" : "w-5/6  mb-1 mx-auto"} 
         ${!isSelected && (isDesktop ? " ancho " : "h-[65px]") + " grayscale "} 
          shadow-sm shadow-gray-400 bg-center bg-cover rounded-3xl h-[350px] mb-3
         ${numbers.includes(i) ? "topo opacity-100" : "opacity-0"}
@@ -116,64 +120,64 @@ const MyProjects = () => {
   };
   return (
     <>
-      <div ref={ref} className="mt-36">
+      <div className="mt-36" ref={ref}>
         <div
-          id="section3"
-          className={`relative text-white  mb-10 h-44 px-5  lg:px-20 max-w-3xl`}
+          className={`text-gray-200  ${
+            isDesktop ? "w-3/5  mx-auto" : "w-5/6  mx-auto"
+          }  `}
         >
-          <div
-            className={`text-3xl absolute transition-all duration-500 ${
-              inView ? "top-8 opacity-100" : "-top-[30px] opacity-0"
-            } -top-20 font-extrabold`}
+          <h3
+            className={`text-3xl font-extrabold mb-5 ${
+              inView ? "expand-top" : " opacity-0"
+            }`}
           >
             Mis proyectos
-          </div>
-          <div
-            className={`${
+          </h3>
+          <p
+            className={`transition-all duration-700 ${
               inView ? "opacity-100" : "opacity-0"
-            } transition-all  duration-700  mt-8 pt-20 text-lg `}
+            }`}
           >
             Estos proyectos demuestran mi experiencia con ejemplos prácticos de
             algunos de mis trabajos, incluidas breves descripciones y enlaces a
             repositorios de código y demostraciones en vivo. Muestran mi
             capacidad para enfrentar desafíos complejos, adaptarme a diversas
             tecnologías y supervisar proyectos de manera eficiente.
+          </p>
+        </div>
+        <div ref={ref2}>
+          <div className="flex gap-4 mt-10 justify-center">
+            {isDesktop && Projects.map(renderProject)}
           </div>
-        </div>
-        {/* <div className="fixed top-0 bg-white  text-black">
-          is in view?{inView.toString()} {numbers.toString()}
-        </div> */}
-        <div className="flex gap-4 justify-center">
-          {isDesktop && Projects.map(renderProject)}
-        </div>
-        <div className="mt-20 ">
-          {isMobile && Projects.map(renderProject)}
-          {inView && (
-            <div className="flex gap-3 mt-10 justify-center">
-              <button className="shadow__btn" onClick={prevProjects}>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  height="1em"
-                  width="1em"
-                  className="w-10 h-10"
-                >
-                  <path d="M13.293 6.293L7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
-                </svg>
-              </button>
-              <button className="shadow__btn" onClick={nextProjects}>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  height="1em"
-                  width="1em"
-                  // className="w-10 h-6 "
-                >
-                  <path d="M10.707 17.707L16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
-                </svg>
-              </button>
-            </div>
-          )}
+          <div className="">
+            {isMobile && Projects.map(renderProject)}
+            {inView2 && (
+              <div className="flex gap-3 justify-center">
+                <button className="shadow__btn" onClick={prevProjects}>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    height="1em"
+                    width="1em"
+                    className="w-10 h-10"
+                  >
+                    <path d="M13.293 6.293L7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                  </svg>
+                </button>
+                <button className="shadow__btn" onClick={nextProjects}>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    height="1em"
+                    width="1em"
+                    // className="w-10 h-6 "
+                  >
+                    <path d="M10.707 17.707L16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                  </svg>
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

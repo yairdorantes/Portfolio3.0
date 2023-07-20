@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { stack } from "./icons";
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "react-responsive";
 
 const Stack = () => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
   const [numbers, setNumbers] = useState([]);
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
+
   const [intervalId, setIntervalId] = useState(null);
   const createInterval = () => {
     let cont = -1;
@@ -32,15 +35,15 @@ const Stack = () => {
   return (
     <>
       <div
+        ref={ref}
         id="section2"
-        className="text-3xl text-white font-extrabold mt-24 mb-5 ml-3"
+        className={`text-3xl   text-white font-extrabold mt-24 mb-10 ${
+          inView ? "expand-top" : "opacity-0"
+        } text-center  `}
       >
         Habilidades{" "}
       </div>
-      <div
-        ref={ref}
-        className="flex  select-none cursor-pointer gap-4 mx-auto justify-center flex-wrap w-full lg:w-1/2 "
-      >
+      <div className="flex  select-none  gap-4 mx-auto justify-center flex-wrap w-full lg:w-1/2 ">
         {stack.map((tech, i) => (
           <div
             style={{
