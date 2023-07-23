@@ -67,18 +67,18 @@ const MyProjects = () => {
           style={{
             backgroundImage: `url(${project.image})`,
           }}
-          className={`
+          className={` 
         relative transition-all duration-300  
         ${isDesktop ? "w-[350px]" : "w-5/6  mb-1 mx-auto"} 
         ${!isSelected && (isDesktop ? " ancho " : "h-[65px]") + " grayscale "} 
          shadow-sm shadow-gray-400 bg-center bg-cover rounded-3xl h-[350px] mb-3
         ${numbers.includes(i) ? "topo opacity-100" : "opacity-0"}
-      `}
+       `}
         >
           {isSelected && (
-            <div className="absolute font-FiraCode  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-30 bg-black bottom-0">
+            <div className="absolute font-FiraCode  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-50 bg-black bottom-0">
               <div className="absolute right-2 top-2 cursor-pointer">
-                <a href={project.repo}>
+                <a href={project.repo} target="_black">
                   <svg
                     viewBox="0 0 1024 1024"
                     fill="currentColor"
@@ -98,21 +98,29 @@ const MyProjects = () => {
               </p>
 
               {project.link_demo && project.link_demo.length > 0 && (
-                <button className="btn btn-sm absolute bottom-2">Demo</button>
+                <a href={project.link_demo} target="_blank" rel="noreferrer">
+                  <button className="btn btn-neutral capitalize btn-sm absolute bottom-2">
+                    Demo
+                  </button>
+                </a>
               )}
             </div>
           )}
           {!isSelected && !isMobile && (
-            <div className="absolute w-full h-full bg-opacity-10 rounded-3xl bg-white">
-              <div className="font-bold w-[350px] h-[150px] flex justify-center items-center text-white text-2xl absolute bottom-14 -left-[65px] -rotate-90">
-                {project.name}
+            <div className="absolute w-full h-full bg-opacity-70 rounded-3xl bg-black">
+              <div className="font-bold w-[350px] h-[150px] flex justify-center items-center  absolute bottom-14 -left-[65px] -rotate-90">
+                <span className="drop-shadow-lg text-gray-200 text-3xl">
+                  {project.name}
+                </span>
               </div>
             </div>
           )}
           {isMobile && projectSelected !== i && (
-            <div className="absolute w-full h-full bg-opacity-10  rounded-3xl bg-white">
-              <div className="font-bold h-full  flex justify-center items-center  text-white text-2xl">
-                {project.name}
+            <div className="absolute w-full h-full bg-opacity-70 bg-black rounded-3xl ">
+              <div className=" h-full  flex justify-center items-center   font-extrabold  ">
+                <span className="drop-shadow-lg text-gray-200 text-3xl">
+                  {project.name}
+                </span>
               </div>
             </div>
           )}
@@ -122,7 +130,7 @@ const MyProjects = () => {
   };
   return (
     <>
-      <div id="portfolio" className="mt-36 font-RaleWay" ref={ref}>
+      <div id="portfolio" className="mt-36 mb-20 font-RaleWay" ref={ref}>
         <div
           className={`text-gray-200  ${
             isDesktop ? "w-3/5  mx-auto" : "w-5/6  mx-auto"
@@ -154,8 +162,11 @@ const MyProjects = () => {
           <div className="">
             {isMobile && Projects.map(renderProject)}
             {inView2 && (
-              <div className="flex gap-3 justify-center">
-                <button className="shadow__btn" onClick={prevProjects}>
+              <div className="flex mt-10 gap-3 justify-center">
+                <button
+                  className={startArray >= 5 ? `shadow__btn` : "disabled__btn"}
+                  onClick={prevProjects}
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -166,7 +177,12 @@ const MyProjects = () => {
                     <path d="M13.293 6.293L7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
                   </svg>
                 </button>
-                <button className="shadow__btn" onClick={nextProjects}>
+                <button
+                  className={`${
+                    endArray < projects.length ? "shadow__btn" : "disabled__btn"
+                  }`}
+                  onClick={nextProjects}
+                >
                   <svg
                     viewBox="0 0 24 24"
                     fill="currentColor"

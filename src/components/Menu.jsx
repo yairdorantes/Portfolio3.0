@@ -60,57 +60,57 @@ const Menu = () => {
         className={`fixed  transition-all duration-300  text-white font-bold text-xl flex  ${
           isMobile
             ? isVisible
-              ? "flex-col text-3xl capitalize cursor-pointer top-0  right-0 justify-around items-center bg-white bg-opacity-40  z-10 w-full h-full"
+              ? "flex-col text-3xl capitalize  top-0  right-0 justify-around items-center bg-white bg-opacity-40  z-10 w-full h-full"
               : "flex-col top-0 capitalize justify-around items-center bg-white bg-opacity-40  z-10 w-full h-full -right-full"
-            : "right-10 top-5  gap-10 capitalize"
+            : "right-10 top-5 z-10 gap-10 capitalize"
         }  `}
       >
         <a
           href="#home"
           onClick={() => isMobile && setIsVisible(false)}
-          className={` ${
+          className={`cursor-pointer ${
             isMobile
               ? "h-1/4 bg-blue-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
           }   `}
         >
-          home
+          Inicio
         </a>
         <a
           href="#skills"
           onClick={() => isMobile && setIsVisible(false)}
-          className={`${
+          className={`cursor-pointer ${
             isMobile
               ? "h-1/4 bg-teal-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
           }`}
         >
-          Skills
+          Habilidades
         </a>
 
         <a
           href="#portfolio"
           onClick={() => isMobile && setIsVisible(false)}
-          className={`${
+          className={`cursor-pointer ${
             isMobile
               ? "h-1/4 bg-rose-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
           }`}
         >
-          Portfolio
+          Portafolio
         </a>
         <a
           href={cv}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => isMobile && setIsVisible(false)}
-          className={`${
+          className={`cursor-pointer ${
             isMobile
               ? "h-1/4 bg-yellow-600 bg-opacity-80 w-full flex justify-center items-center"
               : ""
           }`}
         >
-          resume
+          CV
         </a>
       </div>
     </>
