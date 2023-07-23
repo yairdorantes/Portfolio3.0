@@ -109,7 +109,7 @@ const MyProjects = () => {
           {!isSelected && !isMobile && (
             <div className="absolute w-full h-full bg-opacity-70 rounded-3xl bg-black">
               <div className="font-bold w-[350px] h-[150px] flex justify-center items-center  absolute bottom-14 -left-[65px] -rotate-90">
-                <span className="drop-shadow-lg text-gray-200 text-3xl">
+                <span className="drop-shadow-lg font-FiraCode text-gray-200 text-3xl">
                   {project.name}
                 </span>
               </div>
@@ -118,7 +118,7 @@ const MyProjects = () => {
           {isMobile && projectSelected !== i && (
             <div className="absolute w-full h-full bg-opacity-70 bg-black rounded-3xl ">
               <div className=" h-full  flex justify-center items-center   font-extrabold  ">
-                <span className="drop-shadow-lg text-gray-200 text-3xl">
+                <span className="drop-shadow-lg font-FiraCode text-gray-200 text-3xl">
                   {project.name}
                 </span>
               </div>
