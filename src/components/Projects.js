@@ -4,6 +4,8 @@ import trivia from "../media/trivia.jpg";
 import tictac from "../media/tictac.jpg";
 import learn from "../media/learn.jpeg";
 import flappy from "../media/flappy.jpg";
+import numbersImg from "../media/numbers.jpg";
+import weatherImg from "../media/weather.avif";
 export const projects = [
   {
     id: 1,
@@ -29,14 +31,13 @@ export const projects = [
     repo: "https://github.com/yairdorantes/Trivia",
     link_demo: "https://yairdorantes.github.io/Trivia/",
   },
-
   {
-    id: 5,
-    name: "Gato",
-    description: "Juego",
-    repo: "https://github.com/yairdorantes/Tic-Tac-Toe",
-    link_demo: "https://yairdorantes.github.io/Tic-Tac-Toe/",
-    image: tictac,
+    id: 9,
+    image: weatherImg,
+    name: "Aplicacion del clima",
+    description: "App que muestra informacion sobre el clima en tu localidad",
+    repo: "https://github.com/yairdorantes/WeatherApp",
+    link_demo: "https://yairdorantes.github.io/WeatherApp/",
   },
 
   {
@@ -47,6 +48,24 @@ export const projects = [
     repo: "https://github.com/yairdorantes/Facts",
     image: learn,
     link_demo: "https://lovely-chimera-720556.netlify.app/",
+  },
+
+  {
+    id: 8,
+    image: numbersImg,
+    name: "Calculo mental",
+    description:
+      "Aplicación de escritorio hecha con Python🐍 para practicar calculo mental ",
+    repo: "https://github.com/yairdorantes/Calculo_mental",
+  },
+
+  {
+    id: 5,
+    name: "Gato",
+    description: "Juego",
+    repo: "https://github.com/yairdorantes/Tic-Tac-Toe",
+    link_demo: "https://yairdorantes.github.io/Tic-Tac-Toe/",
+    image: tictac,
   },
   {
     id: 7,

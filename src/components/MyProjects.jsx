@@ -76,7 +76,7 @@ const MyProjects = () => {
        `}
         >
           {isSelected && (
-            <div className="absolute font-FiraCode  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-50 bg-black bottom-0">
+            <div className="absolute font-FiraCode  p-5 h-1/2 w-full rounded-br-3xl rounded-bl-3xl bg-opacity-70 bg-black bottom-0">
               <div className="absolute right-2 top-2 cursor-pointer">
                 <a href={project.repo} target="_black">
                   <svg
@@ -93,7 +93,7 @@ const MyProjects = () => {
               <span className="text-2xl   text-white font-bold">
                 {project.name}
               </span>
-              <p className="text-white  max-h-10 mb-2 break-words text-md">
+              <p className="text-white font-bold max-h-10 mb-2 break-words text-md">
                 {project.description}
               </p>
 
