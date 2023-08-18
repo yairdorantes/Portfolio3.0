@@ -34,12 +34,11 @@ export const projects = [
   {
     id: 9,
     image: weatherImg,
-    name: "Aplicacion del clima",
+    name: "Clima App",
     description: "App que muestra informacion sobre el clima en tu localidad",
     repo: "https://github.com/yairdorantes/WeatherApp",
     link_demo: "https://yairdorantes.github.io/WeatherApp/",
   },
-
   {
     id: 6,
     name: "Datos curiosos",
