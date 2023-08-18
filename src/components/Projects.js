@@ -46,6 +46,7 @@ export const projects = [
       "Una aplicación para ampliar tu conocimiento sobre cultura general",
     repo: "https://github.com/yairdorantes/Facts",
     image: learn,
+    link_demo: "https://lovely-chimera-720556.netlify.app/",
   },
   {
     id: 7,
